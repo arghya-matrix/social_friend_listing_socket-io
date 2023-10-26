@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="../js/profile.js"></script>
+    <link rel="stylesheet" href="/css/profile-card.css" />
+  </head>
+
+  <body>
+    <div class="hero">
+      <nav>
+        <img src="/image/chat-04.jpg" alt="logo" class="logo" />
+        <h3>Welcome to iChat App</h3>
+      </nav>
+      <div class="container">
+        <div class="profile-box">
+          <img src="/image/menu.png" alt="menu-icon" class="menu-icon" />
+          <img src="/image/setting.png" alt="Settings" class="settings" />
+          <div class="sub-menu-wrap">
+            <div class="sub-menu">
+              <div class="settings-details">
+                <h3>Settings</h3> 
+              </div>
+              <hr>
+            </div>
+          </div>
+          <h2>Profile</h2>
+          <div id="welcome-message"></div>
+          <div id="details">
+            <ul></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <div class="log-in">
+        <h1>Log In</h1>
+        <form form action="profile-card.html" method="post" class="input-box" id="login-form">
+            <input type="email" name="email_address" id="email_input" placeholder="Email Id" required>
+            <input type="password" name="password" id="password_input" placeholder="password" required>
+            <button type="submit" class="submit"> Log In </button>
+            <hr>
+            <p class="or">Or</p>
+            <p>Do you not have any account?<a href="./sign-up.html"> Register </a></p>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById("login-form")
+
+        form.addEventListener("submit", function (event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Get the form data
+            const formData = {
+                email_address: document.getElementById("email_input").value,
+                password: document.getElementById("password_input").value
+            };
+            // console.log(formData, "<-- Form data");
+            // const formDataString = new URLSearchParams(formData).toString();
+
+            fetch("http://localhost:3000/user/log-in", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(response => {
+                    return response.json()
+                })
+                .then(data => {
+                    const jwt = data.JWTtoken
+                    sessionStorage.setItem("jwtToken", jwt);
+                    const username = data.Profile.user_name;
+                    const Name = data.Profile.Name
+                    const user_id = data.Profile.user_id
+                    console.log(data.Profile,Name,"<<== json response");
+                    window.location.href = `profile-card.html?username=${username}&Name=${Name}&user_id=${user_id}`;
+                })
+                .catch(error => {
+                    // Handle any errors that occur during the fetch request
+                    console.error("Error:", error);
+                }); 
+        });
+    </script>
+</body>
+
+</html>

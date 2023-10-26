@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: #eceaff;
+  color: #525252;
+}
+
+nav {
+  background: #1a1a1a;
+  width: 100%;
+  padding: 10px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  width: 68px;
+  height: 64px;
+  border-radius: 50%;
+  position: relative;
+  left: -110px;
+}
+
+#logo {
+  width: 72px;
+  height: 58px;
+  border-radius: 50px;
+}
+
+nav h3 {
+  display: block;
+  margin: auto;
+  font-size: 26px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: white;
+  position: relative;
+  right: 38px;
+}
+
+.container {
+  display: block;
+  margin: auto;
+  max-width: 540px;
+  max-height: 600px;
+  margin-top: 20px;
+}
+
+.profile-box {
+  background: #ff547a;
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 40px 90px;
+  color: #fff;
+  position: relative;
+  border-radius: 20px;
+}
+
+.menu-icon {
+  width: 25px;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+
+.settings {
+  width: 25px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+}
+
+#welcome-message {
+  padding-top: 12px;
+  font-size: large;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+
+ul {
+  text-align: center;
+  font-size: 15px;
+}
+
+li {
+  text-align: initial;
+  font-size: 20px;
+  padding: 15px;
+}
+
+.btn {
+  position: absolute;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.new-message {
+  font-weight: bold; /* You can apply any styling you prefer for new messages */
+  color: blue;
+}
+
+.sub-menu-wrap {
+  position: absolute;
+  top: 65%;
+  right: -16%;
+  width: 320px;
+}
+
+.sub-menu{
+  background: #f3748f;
+  padding: 20px;
+  margin: 10px;
+  max-width: 220px;
+  border-radius: 20px;
+}
+.settings-details{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.settings-details h3{
+  font-weight: 500;
+}
+.sub-menu hr{
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background: #fff;
+  margin: 15px 0 10px;
+}

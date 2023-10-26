@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat.io</title>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="../js/client.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <nav>
+        <img src="../image/chat-04.jpg" alt="logo" class="logo">
+        <h1>Welcome to iChat App</h1>
+    </nav>
+    <div class="container" id="imageContainer">
+        <div id="myModal" class="modal">
+           
+            <span class="close">&times;</span>
+     
+            <img class="modal-content" id="img01">
+          
+            <!-- Modal Caption (Image Text) -->
+          </div>
+    </div>
+    <div class="send">
+        <form action="#" id="send-container">
+            <input type="file" id="fileInput" accept="image/*">
+            <input type="text" name="messageInp" id="messageInp" placeholder="Type your message...">
+            <button class="btn" type="submit">send</button>
+        </form>
+    </div>      
+    
+</body>
+
+</html>

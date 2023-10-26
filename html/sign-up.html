@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+
+<body>
+    <div class="sign-up">
+        <h1>Sign Up</h1>
+        <form action="profile-card.html" method="post" class="input-box" id="signup-form">
+            <input type="text" name="Name" id="name_input" placeholder="Name">
+            <input type="email" name="email_address" id="email_input" placeholder="Email Id">
+            <input type="password" name="password" id="password_input" placeholder="password">
+            <button type="submit" class="submit">Register</button>
+            <hr>
+            <p class="or">Or</p>
+            <p>Do you have any account?<a href="./log-in.html">Sign In</a></p>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById("signup-form");
+
+        form.addEventListener("submit", function (event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Get the form data (you can add more fields as needed)
+            const formData = {
+                Name: document.getElementById("name_input").value,
+                email_address: document.getElementById("email_input").value,
+                password: document.getElementById("password_input").value
+            };
+            fetch("http://localhost:3000/user/sign-up",{
+                method : "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+            window.location.href = "./log-in.html";
+        });
+    </script>
+</body>
+
+</html>

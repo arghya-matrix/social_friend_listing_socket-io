@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(../image/boat.png);
+  background-size: cover;
+  background-position: center;
+}
+.sign-up {
+  display: block;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  background: #fff;
+  padding: 20px;
+  margin: 8% auto 0;
+  border: 4px solid blueviolet;
+  border-radius: 20px;
+}
+
+.sign-up h1 {
+  color: #1c8adb;
+  margin-top: 12px;
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.input-box {
+  padding: 0px;
+  padding-top: 0px;
+  margin: auto;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#name_input {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px auto 0;
+  border: 1px solid #999;
+  border-radius: 20px;
+  width: 92%;
+}
+
+#email_input {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px auto 0;
+  border: 1px solid #999;
+  border-radius: 20px;
+  width: 92%;
+}
+
+#password_input {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px auto 0;
+  border: 1px solid #999;
+  border-radius: 20px;
+  width: 92%;
+}
+
+.submit {
+  display: block;
+  text-align: center;
+  padding: 8px;
+  border: 2px solid rgb(99, 185, 235);
+  margin: 10px auto 0;
+  border-radius: 50px;
+  width: 100%;
+  background-color: #1c8adb;
+  cursor: pointer;
+  color: #fff;
+  font-size: 26px;
+}
+
+a{
+    text-decoration: none;
+}
+
+hr{
+    margin-top: 20px;
+    width: 80%;
+}
+
+.or{
+    background: #fff;
+    width: 30px;
+    margin: -19px auto 10px;
+}
+
+#details{
+  padding: 20px;
+}
