@@ -1,5 +1,5 @@
 require("./db/mongoDB");
-const port = 3000;
+const port = 5000;
 const userRouter = require("./router/user.router");
 const path = require("path");
 const express = require("express");
@@ -93,7 +93,7 @@ io.on("connection", (socket) => {
       const imagePath = path.join(__dirname, "/public/images", filename);
       // const con_id = Object.keys(room).find((key) => room[key] === socket.id);
       const result = imageData.replace(
-        /^data:image\/(png|jpeg|jpg|gif);base64,/,
+        /^data:(image|application)\/(png|jpeg|jpg|gif|pdf);base64,/,
         ""
       );
       const imageBuffer = Buffer.from(result, "base64");

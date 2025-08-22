@@ -11,7 +11,7 @@ async function validateEmail(req, res, next) {
     });
     
     // console.log(user, "<<====User data");
-    if (user == null) {
+    if (user !== null) {
       if (req.body.email_address.match(emailFormat)) {
         next();
       } else {
